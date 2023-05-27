@@ -1,0 +1,17 @@
+<h1>Pokedex</h1>
+
+<input type="text"[(ngModel)]="nombre" />
+<button (click)="buscar()">Buscar</button>
+
+<br>
+
+<img src=" {{ imagen }}" alt="">
+<br><strong>Altura</strong> {{ altura }}
+<br><strong>Peso</strong> {{ peso }}
+<br><strong>Habilidad</strong> {{ habilidad }}
+<br><strong>Movimiento</strong> {{ movimiento }}
+
+<h2>Listado de pokemones</h2>
+<ul>
+    <li *ngFor="let pokemon of pokemones"(click="abrir(pokemon.name)")>{{ pokemon.name }}</li>
+</ul>

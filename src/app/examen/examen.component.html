@@ -1,0 +1,14 @@
+<div class="container">
+    <button class="b1" (click)="mostrarAlerta()"> boton 1 </button>
+    <button class="b2" (click)="buscar()"> boton 2 </button> 
+</div>
+<div>
+    <div *ngFor="let imagen of saludos">
+        <img src="{{ imagen.foto }}" alt="">
+    </div>
+</div>
+
+<input type="text"[(ngModel)]="nombre" />
+<button (click)="buscar()">Buscar</button>
+<br>
+<strong>Habilidad: </strong>{{ habilidad }}
